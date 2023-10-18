@@ -1,0 +1,115 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #a0dfb6, #85e5d5, #cedff7);
+}
+.primary-color {
+  color: #2d305c;
+}
+.main-wrapper {
+  background: #f5f0f033;
+  width: 284px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0px 0px 5px #ffffffba;
+  border-radius: 25px;
+}
+input#csvFile {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid white;
+  width: 150px;
+  height: 50px;
+  display: none;
+}
+label[for="csvFile"] {
+  cursor: pointer;
+}
+
+.col-lg-5 {
+  position: relative;
+  padding-right: 50px;
+}
+/* to create a verticle line after column */
+.col-lg-5::after {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 500px;
+  background: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+img {
+  padding: 18px;
+  background: white;
+  border-radius: 50%;
+}
+input.btn {
+  background: linear-gradient(125deg, #48a39e 44%, #2983a6);
+  border: none;
+  border-radius: 25px;
+  color: white;
+}
+
+li.list-group-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 15px 5px;
+}
+
+div#fileName {
+  width: 200px;
+  overflow-wrap: break-word;
+}
+
+.content-wrapper.p-3 {
+  height: 500px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.content-wrapper.p-3::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+.content-wrapper.p-3::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a1e9e5a6;
+}
+.content-wrapper.p-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 992px) {
+  .col-lg-5::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background: white;
+    right: 0;
+    left: 0;
+    top: 100%;
+  }
+  .col-lg-5 {
+    position: relative;
+    padding-right: 0px;
+    padding-bottom: 50px;
+  }
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background: #59c6c0;
+}

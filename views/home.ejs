@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="main-wrapper text-center">
+        <h4 class="mb-5 primary-color">SELECT A FILE TO UPLOAD</h4>
+        <form action="/file/upload" method="post" enctype="multipart/form-data">
+          <label for="csvFile">
+            <input type="file" name="csvFile" id="csvFile" accept=".csv" />
+            <img
+              src="../images/cloud-upload-signal-svgrepo-com.svg"
+              alt="Upload svg"
+              height="80"
+              width="auto"
+            />
+            <div id="fileName"></div> </label
+          ><br />
+
+          <input type="submit" value="Upload" class="btn btn-md my-5 px-5" />
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="content-wrapper p-3">
+        <h3 class="primary-color text-center mb-5">Recently Uploaded Files</h3>
+        <ul class="list-group">
+          <% if(files.length > 0){ files.forEach((file)=>{ %>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <%= file.filename %>
+            <div class="action-btn w-25 d-flex justify-content-around">
+              <a href="/file/delete/<%=file.filename%>/">
+                <span class="badge bg-light rounded-pill">
+                  <i class="fa fa-trash fa-fw text-danger"></i>
+                </span>
+              </a>
+              <a href="/file/view/<%=file.filename%>/">
+                <span class="badge bg-light rounded-pill">
+                  <i class="fa fa-external-link fa-fw text-success"></i>
+                </span>
+              </a>
+            </div>
+          </li>
+          <% }); }else{ %>
+          <li class="list-group-item text-center">Nothing to Show</li>
+
+          <%} %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
