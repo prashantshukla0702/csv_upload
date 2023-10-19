@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/file_uploads');
+const dburl = process.env.DATABASE_URL;
+mongoose.connect(dburl);
 
 const db = mongoose.connection;
 db.on('error', (err) => {

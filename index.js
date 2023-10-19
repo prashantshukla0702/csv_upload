@@ -1,5 +1,7 @@
 const express = require('express');
-const port = 8000;
+const dotenv = require('dotenv');
+dotenv.config();
+const port = process.env.PORT;
 const app = express();
 const db = require('./config/mongoose');
 const ejsLayouts = require('express-ejs-layouts');
@@ -8,7 +10,6 @@ const multer = require('multer');
 const session = require('express-session');
 const flash = require('connect-flash');
 const FlashMiddleware = require('./config/FlashMiddleware');
-
 
 // To Parse the Formdata
 app.use(express.urlencoded({ extended: false }));
