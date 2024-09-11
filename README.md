@@ -5,7 +5,7 @@
 <p>Project contains the following feature-</p>
 <ul>
   <li>
-    User can upload a CSV file and the the list of the files will be displayed on the home page of the application.
+    User can upload a CSV file and the list of the uploaded files will be displayed on the home page of the application.
   </li>
   <li>
     Shows an error if user try to upload a file other than csv format.
